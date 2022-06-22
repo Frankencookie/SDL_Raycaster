@@ -1,0 +1,2 @@
+E:\STORAGE\C++\Console_SDL\Debug\Console_SDL.exe
+E:\STORAGE\C++\SDL_Raycaster\Console_SDL_Raycaster\Debug\Console_SDL.exe

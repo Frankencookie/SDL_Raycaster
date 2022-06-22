@@ -1,0 +1,73 @@
+﻿  APP_RendererTest.cpp
+E:\STORAGE\C++\SDL_Raycaster\Console_SDL_Raycaster\Player.h(8,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+E:\STORAGE\C++\SDL_Raycaster\Console_SDL_Raycaster\Player.h(20,21): warning C4305: 'initializing': truncation from 'double' to 'float'
+  CrossPlatformInput.cpp
+  CrossPlatformRenderManager.cpp
+  Entity.cpp
+  EntityLooper.cpp
+  GameManager_UI.cpp
+E:\STORAGE\C++\SDL_Raycaster\Console_SDL_Raycaster\GameManager_UI.cpp(9,53): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+E:\STORAGE\C++\SDL_Raycaster\Console_SDL_Raycaster\GameManager_UI.cpp(10,50): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+E:\STORAGE\C++\SDL_Raycaster\Console_SDL_Raycaster\GameManager_UI.cpp(27,10): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+E:\STORAGE\C++\SDL_Raycaster\Console_SDL_Raycaster\GameManager_UI.cpp(36,24): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+  Helpers.cpp
+  InputBase.cpp
+  InputManager.cpp
+  LevelManager.cpp
+E:\STORAGE\C++\SDL_Raycaster\Console_SDL_Raycaster\Player.h(8,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+E:\STORAGE\C++\SDL_Raycaster\Console_SDL_Raycaster\Player.h(20,21): warning C4305: 'initializing': truncation from 'double' to 'float'
+E:\STORAGE\C++\SDL_Raycaster\Console_SDL_Raycaster\LevelManager.cpp(15,9): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+E:\STORAGE\C++\SDL_Raycaster\Console_SDL_Raycaster\LevelManager.cpp(16,9): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+E:\STORAGE\C++\SDL_Raycaster\Console_SDL_Raycaster\LevelManager.cpp(30,9): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+E:\STORAGE\C++\SDL_Raycaster\Console_SDL_Raycaster\LevelManager.cpp(31,9): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+E:\STORAGE\C++\SDL_Raycaster\Console_SDL_Raycaster\LevelManager.cpp(96,21): warning C4018: '<': signed/unsigned mismatch
+E:\STORAGE\C++\SDL_Raycaster\Console_SDL_Raycaster\LevelManager.cpp(98,22): warning C4018: '<': signed/unsigned mismatch
+E:\STORAGE\C++\SDL_Raycaster\Console_SDL_Raycaster\LevelManager.cpp(121,24): warning C4018: '>': signed/unsigned mismatch
+  main.cpp
+E:\STORAGE\C++\SDL_Raycaster\Console_SDL_Raycaster\Player.h(8,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+E:\STORAGE\C++\SDL_Raycaster\Console_SDL_Raycaster\Player.h(20,21): warning C4305: 'initializing': truncation from 'double' to 'float'
+E:\STORAGE\C++\SDL_Raycaster\Console_SDL_Raycaster\main.cpp(5,1): warning C4326: return type of 'main' should be 'int' instead of 'void'
+  MessageWindow.cpp
+  Player.cpp
+E:\STORAGE\C++\SDL_Raycaster\Console_SDL_Raycaster\Player.h(8,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+E:\STORAGE\C++\SDL_Raycaster\Console_SDL_Raycaster\Player.h(20,21): warning C4305: 'initializing': truncation from 'double' to 'float'
+E:\STORAGE\C++\SDL_Raycaster\Console_SDL_Raycaster\Player.cpp(17,41): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+E:\STORAGE\C++\SDL_Raycaster\Console_SDL_Raycaster\Player.cpp(138,20): warning C4018: '<': signed/unsigned mismatch
+E:\STORAGE\C++\SDL_Raycaster\Console_SDL_Raycaster\Player.cpp(164,30): warning C4305: '+=': truncation from 'double' to 'float'
+  Renderer_Interface.cpp
+E:\STORAGE\C++\SDL_Raycaster\Console_SDL_Raycaster\Renderer_Interface.cpp(21,13): warning C4244: 'initializing': conversion from '_Ty' to 'int', possible loss of data
+          with
+          [
+              _Ty=float
+          ]
+  Renderer_SDL.cpp
+E:\STORAGE\C++\SDL_Raycaster\Console_SDL_Raycaster\Renderer_SDL.cpp(157,20): warning C4018: '<': signed/unsigned mismatch
+E:\STORAGE\C++\SDL_Raycaster\Console_SDL_Raycaster\Renderer_SDL.cpp(172,19): warning C4244: 'argument': conversion from '_Ty' to 'Uint8', possible loss of data
+          with
+          [
+              _Ty=float
+          ]
+E:\STORAGE\C++\SDL_Raycaster\Console_SDL_Raycaster\Renderer_SDL.cpp(171,19): warning C4244: 'argument': conversion from '_Ty' to 'Uint8', possible loss of data
+          with
+          [
+              _Ty=float
+          ]
+E:\STORAGE\C++\SDL_Raycaster\Console_SDL_Raycaster\Renderer_SDL.cpp(170,8): warning C4244: 'argument': conversion from '_Ty' to 'Uint8', possible loss of data
+          with
+          [
+              _Ty=float
+          ]
+E:\STORAGE\C++\SDL_Raycaster\Console_SDL_Raycaster\Renderer_SDL.cpp(186,32): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+E:\STORAGE\C++\SDL_Raycaster\Console_SDL_Raycaster\Renderer_SDL.cpp(187,32): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+E:\STORAGE\C++\SDL_Raycaster\Console_SDL_Raycaster\Renderer_SDL.cpp(188,48): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+E:\STORAGE\C++\SDL_Raycaster\Console_SDL_Raycaster\Renderer_SDL.cpp(205,45): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+E:\STORAGE\C++\SDL_Raycaster\Console_SDL_Raycaster\Renderer_SDL.cpp(209,48): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+E:\STORAGE\C++\SDL_Raycaster\Console_SDL_Raycaster\Renderer_SDL.cpp(225,30): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+E:\STORAGE\C++\SDL_Raycaster\Console_SDL_Raycaster\Renderer_SDL.cpp(226,30): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+E:\STORAGE\C++\SDL_Raycaster\Console_SDL_Raycaster\Renderer_SDL.cpp(227,33): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+E:\STORAGE\C++\SDL_Raycaster\Console_SDL_Raycaster\Renderer_SDL.cpp(228,33): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+  SpriteLoader.cpp
+E:\STORAGE\C++\SDL_Raycaster\Console_SDL_Raycaster\SpriteLoader.cpp(88,22): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+E:\STORAGE\C++\SDL_Raycaster\Console_SDL_Raycaster\SpriteLoader.cpp(102,31): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+  Generating Code...
+  Console_SDL.vcxproj -> E:\STORAGE\C++\SDL_Raycaster\Console_SDL_Raycaster\Debug\Console_SDL.exe
