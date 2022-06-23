@@ -1,0 +1,33 @@
+﻿  APP_RendererTest.cpp
+E:\STORAGE\C++\SDL_Raycaster\Console_SDL_Raycaster\Renderer_SDL.h(2,10): fatal error C1083: Cannot open include file: 'SDL.h': No such file or directory
+  CrossPlatformInput.cpp
+E:\STORAGE\C++\SDL_Raycaster\Console_SDL_Raycaster\InputManager.h(2,10): fatal error C1083: Cannot open include file: 'SDL.h': No such file or directory
+  CrossPlatformRenderManager.cpp
+E:\STORAGE\C++\SDL_Raycaster\Console_SDL_Raycaster\Renderer_SDL.h(2,10): fatal error C1083: Cannot open include file: 'SDL.h': No such file or directory
+  Entity.cpp
+  EntityLooper.cpp
+  GameManager_UI.cpp
+E:\STORAGE\C++\SDL_Raycaster\Console_SDL_Raycaster\SpriteLoader.h(3,10): fatal error C1083: Cannot open include file: 'SDL.h': No such file or directory
+  Helpers.cpp
+  InputBase.cpp
+  InputManager.cpp
+E:\STORAGE\C++\SDL_Raycaster\Console_SDL_Raycaster\InputManager.h(2,10): fatal error C1083: Cannot open include file: 'SDL.h': No such file or directory
+  LevelManager.cpp
+E:\STORAGE\C++\SDL_Raycaster\Console_SDL_Raycaster\InputManager.h(2,10): fatal error C1083: Cannot open include file: 'SDL.h': No such file or directory
+  main.cpp
+E:\STORAGE\C++\SDL_Raycaster\Console_SDL_Raycaster\Renderer_SDL.h(2,10): fatal error C1083: Cannot open include file: 'SDL.h': No such file or directory
+  MessageWindow.cpp
+E:\STORAGE\C++\SDL_Raycaster\Console_SDL_Raycaster\MessageWindow.h(2,10): fatal error C1083: Cannot open include file: 'SDL.h': No such file or directory
+  Player.cpp
+E:\STORAGE\C++\SDL_Raycaster\Console_SDL_Raycaster\InputManager.h(2,10): fatal error C1083: Cannot open include file: 'SDL.h': No such file or directory
+  Renderer_Interface.cpp
+E:\STORAGE\C++\SDL_Raycaster\Console_SDL_Raycaster\Renderer_Interface.cpp(21,13): warning C4244: 'initializing': conversion from '_Ty' to 'int', possible loss of data
+          with
+          [
+              _Ty=float
+          ]
+  Renderer_SDL.cpp
+E:\STORAGE\C++\SDL_Raycaster\Console_SDL_Raycaster\Renderer_SDL.h(2,10): fatal error C1083: Cannot open include file: 'SDL.h': No such file or directory
+  SpriteLoader.cpp
+E:\STORAGE\C++\SDL_Raycaster\Console_SDL_Raycaster\SpriteLoader.h(3,10): fatal error C1083: Cannot open include file: 'SDL.h': No such file or directory
+  Generating Code...
