@@ -75,12 +75,12 @@ Sprite* SpriteLoader::LoadSprite(std::string address, std::string SName, bool sh
 	//PS4 SPRITE LOAD CODE HERE
 #endif
 	//Create Sprite
-	Sprite* newBoi = new Sprite;
+	Sprite* newSprite = new Sprite;
 
 	//Set values
-	newBoi->Address = address;
-	newBoi->Name = SName;
-	newBoi->SpriteHeight = Height;
+	newSprite->Address = address;
+	newSprite->Name = SName;
+	newSprite->SpriteHeight = Height;
 
 	//If spritesheet, do sheet calculations. EACH SPRITE MUST BE SQUARED. Eg: 256 x 128 = two sprites.
 	if (sheet)
@@ -92,42 +92,42 @@ Sprite* SpriteLoader::LoadSprite(std::string address, std::string SName, bool sh
 			if (spriteNumber == 1)
 			{
 				printf("Tried to load spritesheet, but only 1 sprite was found. Loading as regular sprite. \n");
-				newBoi->Spritesheet = false;
-				newBoi->SpriteWidth = Width;
+				newSprite->Spritesheet = false;
+				newSprite->SpriteWidth = Width;
 			}
 			else
 			{
 				printf("SpriteSheet Loaded Successfully \n");
-				newBoi->SpriteWidth = newBoi->SpriteHeight;
-				newBoi->NumberOfSprites = spriteNumber;
-				newBoi->Spritesheet = true;
+				newSprite->SpriteWidth = newSprite->SpriteHeight;
+				newSprite->NumberOfSprites = spriteNumber;
+				newSprite->Spritesheet = true;
 			}
 		}
 		else
 		{
 			printf("Spritesheet load failed. Loading as regular sprite. \n");
-			newBoi->Spritesheet = false;
-			newBoi->SpriteWidth = Width;
+			newSprite->Spritesheet = false;
+			newSprite->SpriteWidth = Width;
 		}
 	}
 	else
 	{
 		printf("Sprite loaded successfully as regular sprite. \n");
-		newBoi->SpriteWidth = Width;
+		newSprite->SpriteWidth = Width;
 	}
 
 	//Add to list
-	SpriteList.push_back(newBoi);
+	SpriteList.push_back(newSprite);
 
 
 	//Create texture and clean up
 #if !_PS4
-	newBoi->Image = SDL_CreateTextureFromSurface(Renderer_SDL::RendererSDLPtr->GetRendererPtr(), tempSurf);
+	newSprite->Image = SDL_CreateTextureFromSurface(Renderer_SDL::RendererSDLPtr->GetRendererPtr(), tempSurf);
 	SDL_FreeSurface(tempSurf);
 #else
 	//PS4 SPRITE LOAD CLEANUP HERE
 #endif
-	return newBoi;
+	return newSprite;
 }
 
 
