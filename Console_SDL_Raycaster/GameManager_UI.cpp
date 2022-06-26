@@ -2,12 +2,12 @@
 
 GameManager_UI::GameManager_UI()
 {
-	RendererBoi = Renderer_Interface::RendererInterfacePtr;
+	Renderer_ptr = Renderer_Interface::RendererInterfacePtr;
 
 	UiSprite = SpriteLoader::SpriteLoaderPtr->LoadSprite("Assets/UI.png", "UI");
 
-	UiLocation.X = (RendererBoi->GetScreenWidth() / 2) - (UiSprite->SpriteWidth / 2);
-	UiLocation.Y = (RendererBoi->GetMidpoint() * 2) - (UiSprite->SpriteHeight);
+	UiLocation.X = (Renderer_ptr->GetScreenWidth() / 2) - (UiSprite->SpriteWidth / 2);
+	UiLocation.Y = (Renderer_ptr->GetMidpoint() * 2) - (UiSprite->SpriteHeight);
 
 	FpsLocation.X = UiLocation.X + 20;
 	FpsLocation.Y = UiLocation.Y + 80;
@@ -16,24 +16,24 @@ GameManager_UI::GameManager_UI()
 	TimeLocation.Y = FpsLocation.Y;
 
 
-	LooperBoi = EntityLooper::EntityLoopSelfPtr;
+	Looper_ptr = EntityLooper::EntityLoopSelfPtr;
 }
 
 void GameManager_UI::DrawUI()
 {
-	RendererBoi->DrawSprite(UiSprite, 1, UiLocation);
+	Renderer_ptr->DrawSprite(UiSprite, 1, UiLocation);
 
 	//Work out fps
-	Fps = 1 / LooperBoi->DeltaTime;
+	Fps = 1 / Looper_ptr->DeltaTime;
 	
-	if (LooperBoi->DeltaTime < 1)
+	if (Looper_ptr->DeltaTime < 1)
 	{
-		GameTime += (LooperBoi->DeltaTime);
+		GameTime += (Looper_ptr->DeltaTime);
 	}
 
-	RendererBoi->DrawText(std::to_string(Fps), FpsLocation, 0.4f);
+	Renderer_ptr->DrawText(std::to_string(Fps), FpsLocation, 0.4f);
 
 	int GameTimeToDisplay = floor(GameTime);
-	RendererBoi->DrawText(std::to_string(GameTimeToDisplay), TimeLocation, 0.4f);
+	Renderer_ptr->DrawText(std::to_string(GameTimeToDisplay), TimeLocation, 0.4f);
 }
 

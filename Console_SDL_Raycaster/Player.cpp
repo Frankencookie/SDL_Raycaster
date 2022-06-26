@@ -2,26 +2,26 @@
 
 Player::Player()
 {
-	InputBoi = CrossPlatformInput::InputPtr;
-	RenderBoi = Renderer_Interface::RendererInterfacePtr;
+	Input_ptr = CrossPlatformInput::InputPtr;
+	Render_ptr = Renderer_Interface::RendererInterfacePtr;
 	//RenderBoi->SetCameraData(lineBois);
-	screenLines.resize(RenderBoi->GetScreenWidth());
+	screenLines.resize(Render_ptr->GetScreenWidth());
 
 	CameraPlaneA = MultiplyVector(Direction, CameraPlaneOffset);
 	CameraPlaneA.X = -CameraPlaneOffset;
 
-	RayMarchScreenStep = (CameraPlaneOffset + CameraPlaneOffset) / RenderBoi->GetScreenWidth();
+	RayMarchScreenStep = (CameraPlaneOffset + CameraPlaneOffset) / Render_ptr->GetScreenWidth();
 	CameraPlaneChangeVector.X = RayMarchScreenStep;
 	CameraPlaneChangeVector.Y = 0;
 
-	screenMidPoint = RenderBoi->GetMidpoint();
+	screenMidPoint = Render_ptr->GetMidpoint();
 	Test = SpriteLoader::SpriteLoaderPtr->GetSprite();
 	//SpriteRect.h = 128;
 	//SpriteRect.w = 128;
 	//SpriteRect.x = 0;
 	//SpriteRect.y = 0;
 
-	LevelPtr = LevelManager::LevelPtr;
+	Level_ptr = LevelManager::LevelPtr;
 }
 
 Player::~Player()
@@ -38,18 +38,18 @@ void Player::Update(float Delta)
 
 	//Movement By Axis
 	//Forward
-	if (InputBoi->GetAxisValue(CA_LEFTY))
+	if (Input_ptr->GetAxisValue(CA_LEFTY))
 	{
-		float value = -InputBoi->GetAxisValue(CA_LEFTY) / 32767;
+		float value = -Input_ptr->GetAxisValue(CA_LEFTY) / 32767;
 		if (std::abs(value) > MovementDeadzone)
 		{
 			MoveForward_Axis(value, TempSpeed);
 		}
 	}
 	//Right
-	if (InputBoi->GetAxisValue(CA_LEFTX))
+	if (Input_ptr->GetAxisValue(CA_LEFTX))
 	{
-		float value = InputBoi->GetAxisValue(CA_LEFTX) / 32767;
+		float value = Input_ptr->GetAxisValue(CA_LEFTX) / 32767;
 		if (std::abs(value) > MovementDeadzone)
 		{
 			MoveRight_Axis(value, TempSpeed);
@@ -57,9 +57,9 @@ void Player::Update(float Delta)
 	}
 
 	//Rotation By Axis
-	if (InputBoi->GetAxisValue(CA_RIGHTX))
+	if (Input_ptr->GetAxisValue(CA_RIGHTX))
 	{
-		float value = -InputBoi->GetAxisValue(CA_RIGHTX) / 32767;
+		float value = -Input_ptr->GetAxisValue(CA_RIGHTX) / 32767;
 		if (std::abs(value) > MovementDeadzone)
 		{
 			Turn(value, TempRotationSpeed);
@@ -98,7 +98,7 @@ void Player::Move()
 {
 	Vector2D newPos = CurrentPosition;
 	newPos = AddVectors(newPos, Velocity);
-	if (LevelPtr->IsMoveValid(newPos))
+	if (Level_ptr->IsMoveValid(newPos))
 	{
 		CurrentPosition = newPos;
 	}
@@ -149,7 +149,7 @@ void Player::CalculateCamera()
 		{
 			RayPos = AddVectors(MultiplyVector(RayDirection, RayMarchStepTemp), RayPos);
 
-			if (!LevelPtr->IsMoveValid(RayPos) || distance > MaxDistance)
+			if (!Level_ptr->IsMoveValid(RayPos) || distance > MaxDistance)
 			{
 				float angle = DotProduct(RayDirection, Direction);
 				screenLines[x] = (sin(angle) * distance);
@@ -166,6 +166,6 @@ void Player::CalculateCamera()
 		}
 	}
 
-	RenderBoi->SetCameraData(screenLines);
+	Render_ptr->SetCameraData(screenLines);
 	
 }

@@ -14,8 +14,8 @@ public:
 	Player();
 	~Player();
 protected:
-	CrossPlatformInput* InputBoi;
-	Renderer_Interface* RenderBoi;
+	CrossPlatformInput* Input_ptr;
+	Renderer_Interface* Render_ptr;
 
 	float RayMarchStep = 0.01;
 	float MaxDistance = 28;
@@ -36,7 +36,7 @@ protected:
 
 	Vector2D Velocity = { 0,0 };
 
-	LevelManager* LevelPtr;
+	LevelManager* Level_ptr;
 
 
 	void CalculateCamera();

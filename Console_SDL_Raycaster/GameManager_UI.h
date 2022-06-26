@@ -9,7 +9,7 @@ class GameManager_UI
 public:
 	GameManager_UI();
 private:
-	Renderer_Interface* RendererBoi;
+	Renderer_Interface* Renderer_ptr;
 	//SpriteLoader* SpriteLoadBoi;
 	Sprite* UiSprite;
 
@@ -22,7 +22,7 @@ private:
 	Vector2D FpsLocation;
 	Vector2D TimeLocation;
 
-	EntityLooper* LooperBoi;
+	EntityLooper* Looper_ptr;
 
 public:
 	void DrawUI();

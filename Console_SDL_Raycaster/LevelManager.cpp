@@ -50,33 +50,33 @@ Level* LevelManager::LoadLevelFromFile(std::string Address, std::string NewName)
 
 	if (File.is_open())
 	{
-		Level* newBoi = new Level;
-		newBoi->Name = NewName;
+		Level* newLevel = new Level;
+		newLevel->Name = NewName;
 
 		int row = 0;
 		printf("Level File opened \n");
 
 		std::vector<int> col;
-		newBoi->StartMap.push_back(col);
+		newLevel->StartMap.push_back(col);
 
 		while (File >> Value)
 		{
 			if (Value != 9)
 			{
-				newBoi->StartMap.at(row).push_back(Value);
+				newLevel->StartMap.at(row).push_back(Value);
 			}
 			else
 			{
 				++row;
 				std::vector<int> col;
-				newBoi->StartMap.push_back(col);
+				newLevel->StartMap.push_back(col);
 			}
 
 		}
 
 		File.close();
 		printf("File Closed \n");
-		LevelList.push_back(newBoi);
+		LevelList.push_back(newLevel);
 	}
 	else
 	{
@@ -88,17 +88,17 @@ Level* LevelManager::LoadLevelFromFile(std::string Address, std::string NewName)
 
 Level* LevelManager::OpenLevel(int LevelIntToLoad, bool reset)
 {
-	Level* loadBoi = LevelList[LevelIntToLoad];
-	if (reset || !loadBoi->Loaded)
+	Level* levelToLoad = LevelList[LevelIntToLoad];
+	if (reset || !levelToLoad->Loaded)
 	{
-		loadBoi->Map = loadBoi->StartMap;
+		levelToLoad->Map = levelToLoad->StartMap;
 
-		for (int i = 0; i < loadBoi->Map.size(); i++)
+		for (int i = 0; i < levelToLoad->Map.size(); i++)
 		{
-			for (int u = 0; u < loadBoi->Map.at(i).size(); u++)
+			for (int u = 0; u < levelToLoad->Map.at(i).size(); u++)
 			{
 				//if(loadBoi->Map.at(i)[u] == 2)
-				switch (loadBoi->Map.at(i)[u])
+				switch (levelToLoad->Map.at(i)[u])
 				{
 				case 2:
 					//EntityLooper::EntityLoopSelfPtr->SpawnEntity<Player>();
@@ -111,8 +111,8 @@ Level* LevelManager::OpenLevel(int LevelIntToLoad, bool reset)
 			}
 		}
 	}
-	CurrentLevel = loadBoi;
-	return loadBoi;
+	CurrentLevel = levelToLoad;
+	return levelToLoad;
 }
 
 bool LevelManager::CompleteLevel()

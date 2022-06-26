@@ -5,9 +5,9 @@ CrossPlatformInput* CrossPlatformInput::InputPtr;
 CrossPlatformInput::CrossPlatformInput()
 {
 #if _PS4
-	InputBoi = new PS4_InputManager;
+	Input = new PS4_InputManager;
 #else
-	InputBoi = new InputManager;
+	Input = new InputManager;
 #endif
 
 	InputPtr = this;
@@ -15,25 +15,25 @@ CrossPlatformInput::CrossPlatformInput()
 
 CrossPlatformInput::~CrossPlatformInput()
 {
-	delete InputBoi;
+	delete Input;
 }
 
 float CrossPlatformInput::GetAxisValue(ControllerAxis axis)
 {
-	return InputBoi->GetAxisValue(axis);
+	return Input->GetAxisValue(axis);
 }
 
 bool CrossPlatformInput::GetButtonDown(ControllerButtons button)
 {
-	return InputBoi->GetButtonDown(button);
+	return Input->GetButtonDown(button);
 }
 
 bool CrossPlatformInput::GetControllerConnected()
 {
-	return InputBoi->IsController();
+	return Input->IsController();
 }
 
-void CrossPlatformInput::UpdateInputBoi()
+void CrossPlatformInput::UpdateInput()
 {
-	InputBoi->UpdateInput();
+	Input->UpdateInput();
 }

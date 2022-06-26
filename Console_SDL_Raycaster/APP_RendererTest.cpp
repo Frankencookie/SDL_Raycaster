@@ -5,34 +5,34 @@ void APP_RendererTest::Start()
 	Running = true;
 	//Renderer_SDL* Renderer = new Renderer_SDL;
 	//Renderer_Interface* Renderer = new Renderer_Interface;
-	CrossPlatformRenderManager* RenderManager = new CrossPlatformRenderManager;
-	Renderer_Interface* Renderer = RenderManager->Renderer;
-	EntityLooper* EntityLoop = new EntityLooper;
+	CrossPlatformRenderManager* RenderManager_ptr = new CrossPlatformRenderManager;
+	Renderer_Interface* Renderer_ptr = RenderManager_ptr->Renderer;
+	EntityLooper* EntityLoop_ptr = new EntityLooper;
 
 	//InputManager* InputBoi = new InputManager;
-	CrossPlatformInput* InputBoi = new CrossPlatformInput;
-	LevelManager* LevelManagerBoi = new LevelManager;
-	SpriteLoader* SpriteLoadBoi = new SpriteLoader;
-	Player* PlayerBoi = EntityLoop->SpawnEntity<Player>();
-	PlayerBoi->SetPosition(Vector2D{6,6});
+	CrossPlatformInput* Input_ptr = new CrossPlatformInput;
+	LevelManager* LevelManager_ptr = new LevelManager;
+	SpriteLoader* SpriteLoad_ptr = new SpriteLoader;
+	Player* Player_ptr = EntityLoop_ptr->SpawnEntity<Player>();
+	Player_ptr->SetPosition(Vector2D{6,6});
 
 	//UI And Game Manager
-	GameManager_UI* GameManager = new GameManager_UI;
+	GameManager_UI* GameManager_ptr = new GameManager_UI;
 
 	//SpriteSheetTest
 	//SpriteLoadBoi->LoadSprite("Assets/SheetTest.png", "SheetTest", true);
 	//Invalid sprite sheet test
-	SpriteLoadBoi->LoadSprite("Assets/SheetTestInvalid.png", "SheetTest", true);
+	SpriteLoad_ptr->LoadSprite("Assets/SheetTestInvalid.png", "SheetTest", true);
 
 	while (Running)
 	{
-		InputBoi->UpdateInputBoi();
-		if (InputBoi->GetButtonDown(CB_TOP)&& ! levelSwitchDown)
+		Input_ptr->UpdateInput();
+		if (Input_ptr->GetButtonDown(CB_TOP)&& ! levelSwitchDown)
 		{
 			levelSwitchDown = true;
-			if (LevelManagerBoi->CompleteLevel())
+			if (LevelManager_ptr->CompleteLevel())
 			{
-				PlayerBoi->SetPosition(Vector2D{ 6,6 });
+				Player_ptr->SetPosition(Vector2D{ 6,6 });
 			}
 			else
 			{
@@ -40,32 +40,32 @@ void APP_RendererTest::Start()
 			}
 			
 		}
-		if (!InputBoi->GetButtonDown(CB_TOP))
+		if (!Input_ptr->GetButtonDown(CB_TOP))
 		{
 			levelSwitchDown = false;
 		}
-		if (InputBoi->GetButtonDown(CB_START))
+		if (Input_ptr->GetButtonDown(CB_START))
 		{
 			CloseGame();
 		}
-		Renderer->DrawBackground();
-		EntityLoop->UpdateEntities();
-		if (InputBoi->GetButtonDown(CB_BOTTOM))
+		Renderer_ptr->DrawBackground();
+		EntityLoop_ptr->UpdateEntities();
+		if (Input_ptr->GetButtonDown(CB_BOTTOM))
 		{
-			Renderer->DrawText("The Game", Vector2D{ 0,0 }, 1);
+			Renderer_ptr->DrawText("The Game", Vector2D{ 0,0 }, 1);
 			//Renderer->DrawSprite(SpriteLoadBoi->GetSprite(), 1, Vector2D{ 500, 0 });
 			//Renderer->DrawSprite(SpriteLoadBoi->GetSprite("SheetTest"), 1, Vector2D{ 0, 200 }, 1);
 		}
 		
-		GameManager->DrawUI();
-		Renderer->PrintToScreen();
+		GameManager_ptr->DrawUI();
+		Renderer_ptr->PrintToScreen();
 	}
 
-	delete SpriteLoadBoi;
-	delete InputBoi;
-	delete EntityLoop;
-	delete LevelManagerBoi;
-	delete Renderer;
+	delete SpriteLoad_ptr;
+	delete Input_ptr;
+	delete EntityLoop_ptr;
+	delete LevelManager_ptr;
+	delete Renderer_ptr;
 
 	SDL_Quit();
 

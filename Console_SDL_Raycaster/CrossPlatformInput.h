@@ -15,7 +15,7 @@ private:
 	//SHOULD WE USE PS4 STUFF OR SDL2?
 	const bool PS4 = false;
 
-	InputBase* InputBoi;
+	InputBase* Input;
 
 public:
 	//Data
@@ -25,5 +25,5 @@ public:
 	bool GetControllerConnected();
 
 	//Call every frame
-	void UpdateInputBoi();
+	void UpdateInput();
 };
