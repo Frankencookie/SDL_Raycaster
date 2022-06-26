@@ -1,7 +1,0 @@
-﻿  Player.cpp
-E:\STORAGE\C++\SDL_Raycaster\Console_SDL_Raycaster\Player.h(8,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-E:\STORAGE\C++\SDL_Raycaster\Console_SDL_Raycaster\Player.h(20,21): warning C4305: 'initializing': truncation from 'double' to 'float'
-E:\STORAGE\C++\SDL_Raycaster\Console_SDL_Raycaster\Player.cpp(17,41): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-E:\STORAGE\C++\SDL_Raycaster\Console_SDL_Raycaster\Player.cpp(138,20): warning C4018: '<': signed/unsigned mismatch
-E:\STORAGE\C++\SDL_Raycaster\Console_SDL_Raycaster\Player.cpp(164,30): warning C4305: '+=': truncation from 'double' to 'float'
-  Console_SDL.vcxproj -> E:\STORAGE\C++\SDL_Raycaster\Console_SDL_Raycaster\Debug\Console_SDL.exe
